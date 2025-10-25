@@ -1,14 +1,7 @@
-import supertest from 'supertest'
+beforeAll(() => {
+  console.log('Iniciando todos os testes de API...');
+});
 
-export const testServer = supertest("https://gorest.co.in/public/v2")
-
-describe('GoRest API', () => {
-  it('GET /users should return list of users', async () => {
-    const response = await testServer.get('/users'); // GET /users
-    expect(response.status).toBe(200);
-    expect(Array.isArray(response.body)).toBe(true);
-  });
-
-  
-  
+afterAll(() => {
+  console.log('Todos os testes finalizados.');
 });
