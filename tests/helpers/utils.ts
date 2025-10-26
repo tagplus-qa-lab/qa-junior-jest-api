@@ -13,3 +13,11 @@ export const fakePost = {
   title: chance.sentence({ words: 6 }),
   body: chance.paragraph({ sentences: 5 }),
 };
+
+export const fakeComment = {
+    post_id: 253611,
+    name: chance.name(),
+    email: chance.email(),
+    body: chance.paragraph({ sentences: 2 }),
+  };
+
