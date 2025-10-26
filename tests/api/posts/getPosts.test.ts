@@ -1,7 +1,11 @@
 import supertest from "supertest";
-import { BASE_URL } from '../../config/env';
+import dotenv from "dotenv";
 import { postSchema } from "../../schemas/postSchema";
 import Ajv from "ajv";
+
+dotenv.config();
+
+const BASE_URL = process.env.BASE_URL!;
 
 export const testServer = supertest(BASE_URL);
 const ajv = new Ajv();
