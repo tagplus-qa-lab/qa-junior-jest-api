@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import dotenv from "dotenv";
-import { fakePost } from "../../helpers/utils";
+import { getRandomId } from "../../helpers/data";
 
 dotenv.config();
 
@@ -10,16 +10,8 @@ export const testServer = supertest(BASE_URL);
 
 describe("GoRest API Posts", () => {
   it("TC-POST-004: DELETE /posts/:id deve deletar um post", async () => {
-    const createResponse = await testServer
-      .post("/posts")
-      .send(fakePost)
-      .set("Accept", "application/json")
-      .set("Authorization", `Bearer ${TOKEN}`);
-
-    const postId = createResponse.body.id;
-
     const deleteResponse = await testServer
-      .delete(`/posts/${postId}`)
+      .delete(`/posts/${await getRandomId("post")}`)
       .set("Accept", "application/json")
       .set("Authorization", `Bearer ${TOKEN}`);
 

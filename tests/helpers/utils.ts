@@ -1,23 +1,22 @@
 import Chance from "chance";
 const chance = new Chance();
 
-export const fakeUser = {
+export const generateFakeUser = () => ({
+  name: chance.name(),
+  email: `user_${Date.now()}_${chance.guid()}@mail.com`,
+  gender: chance.gender().toLowerCase(),
+  status: "active",
+});
+
+
+export const generateFakePost = () => ({
+  title: chance.sentence({ words: 6 }),
+  body: chance.paragraph({ sentences: 3 }),
+});
+
+
+export const generateFakeComment = () => ({
   name: chance.name(),
   email: chance.email(),
-  gender: chance.gender().toLowerCase(),
-  status: chance.pickone(["active", "inactive"]),
-};
-
-export const fakePost = {
-  user_id: 8208666,
-  title: chance.sentence({ words: 6 }),
-  body: chance.paragraph({ sentences: 5 }),
-};
-
-export const fakeComment = {
-    post_id: 253611,
-    name: chance.name(),
-    email: chance.email(),
-    body: chance.paragraph({ sentences: 2 }),
-  };
-
+  body: chance.paragraph({ sentences: 2 }),
+});
