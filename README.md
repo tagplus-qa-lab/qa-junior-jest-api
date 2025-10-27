@@ -29,7 +29,7 @@ cp .env.example .env
 
 3. Criar token no seu **.env**. Você gera a partir do site do [GoRest](https://gorest.co.in)
 ```bash
-GOREST_TOKEN="Seu Token"
+GOREST_TOKEN=Seu Token
 ```
 
 4. Instalar as dependências do projeto:  
