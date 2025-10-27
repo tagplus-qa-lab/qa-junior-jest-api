@@ -1,5 +1,5 @@
 {
-  "name": "qa-junior-playwright-api",
+  "name": "qa-junior-jest-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tagplus-qa-lab/qa-junior-playwright-api.git"
+    "url": "git+https://github.com/tagplus-qa-lab/qa-junior-jest-api.git"
   },
   "author": "Aline de Abreu Espindola",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tagplus-qa-lab/qa-junior-playwright-api/issues"
+    "url": "https://github.com/tagplus-qa-lab/qa-junior-jest-api/issues"
   },
-  "homepage": "https://github.com/tagplus-qa-lab/qa-junior-playwright-api#readme",
+  "homepage": "https://github.com/tagplus-qa-lab/qa-junior-jest-api#readme",
   "devDependencies": {
     "@types/chance": "^1.1.7",
     "@types/jest": "^30.0.0",
