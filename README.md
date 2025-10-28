@@ -7,7 +7,8 @@
 4. [Repositórios Jest e Playwright](#3-por-que-existem-repositórios-com-playwright-e-jest)
 5. [Outras documentações](#4-outras-documentações)
 6. [Versionamento, code review e padronização](#5-versionamento-code-review-e-padronização-git)
-7. [Agradecimentos](#agradecimentos)
+7. [Futuras Melhorias e Sugestões](#6-futuras-melhorias-e-sugestões)
+8. [Agradecimentos](#agradecimentos)
 
 ---
 
@@ -122,6 +123,37 @@ Utilizei o padrão **Conventional Commits** para manter o histórico limpo e inf
 | `chore`    | Atualizações gerais (ex.: dependências, build)       | `chore(jest-api-54): atualiza versão do Playwright`       |
 | `perf`     | Melhorias de performance                             | `perf(jest-api-12): otimiza carregamento de dados`          |
 | `revert`   | Reversão de um commit anterior                       | `revert(jest-api-11): remove validação do nome do usuário`            |
+
+---
+
+## 6. Futuras Melhorias e Sugestões
+
+Durante o desenvolvimento deste projeto, identifiquei diversas oportunidades de evolução e aprimoramento para torná-lo ainda mais robusto, escalável e aderente a boas práticas de qualidade de software.
+
+### 📈 Melhorias Técnicas e Estruturais
+- **Adicionar novos tipos de testes:** incluir testes como *unitários* para ampliar a cobertura e garantir estabilidade.
+- **Centralizar repositórios de testes:** criar um **repositório principal** que englobe os três repositórios de testes existentes (frontend e API), permitindo clonar e executar todas as suítes de testes com um único comando.  
+  - Esse repositório também poderia conter:
+    - Documentação unificada
+    - Scripts automatizados de execução
+    - Relatórios consolidados
+- **Logging:** incluir logs estruturados para diferentes níveis de severidade:
+  - **Info:** eventos importantes ou etapas concluídas com sucesso.
+  - **Warning:** alertas sobre comportamentos inesperados que não quebram o teste.
+  - **Error:** falhas críticas ou exceções, com rastreamento detalhado da origem do problema.
+
+### 💡 Melhorias Funcionais
+- **Criar validadores personalizados:** incluir validações automáticas de campos como:
+  - **E-mail** (formato válido)
+  - **Senha** (mínimo de caracteres, regras de negócio, complexidade)
+  - **Campos obrigatórios e regras condicionais**
+- **Expandir a cobertura de testes de integração:**  
+  - Testar funcionalidades adicionais, como **ordenação de produtos**, **filtros** e **fluxos alternativos de login**.
+  - Garantir que as principais jornadas do usuário estejam protegidas contra regressões.
+- **Notificações automáticas de falhas:** implementar envio de e-mail via **NodeMailer** na pipeline sempre que ocorrerem erros críticos nos testes, permitindo resposta rápida e acompanhamento das falhas.
+
+### 📝 Considerações Finais
+Essas sugestões representam o próximo passo natural para aprimorar a qualidade do projeto, aumentar a confiabilidade dos testes e tornar a manutenção mais eficiente e escalável.
 
 ---
 
