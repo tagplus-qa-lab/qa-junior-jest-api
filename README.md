@@ -97,6 +97,8 @@ No projeto, algumas documentações adicionais estão disponíveis para referên
 - Controle de versão: Git + GitHub  
 - Versão inicial: 1.0.0  
   - Todos requisitos cumpridos e documentados
+- Versão: 1.0.1
+  - Novas documentações e correção do .env.example
 - Todas as alterações foram commitadas e revisadas via pull request para manter a consistência do código, além de usar o Kanban para fins de organização de tarefas.
 
 ### Padrões de Desenvolvimento
